@@ -1,0 +1,313 @@
+@media screen and (max-width: 1920px) {
+            body { background-color: rgb(195, 255, 127); }
+        }
+        @media screen and (max-width: 1280px) {
+            body { background-color: aquamarine; }
+        }
+        @media screen and (max-width: 800px) {
+            body { background-color: rgb(255, 172, 127); }
+        }
+        @media screen and (max-width: 480px) {
+            body { background-color: rgb(127, 136, 255); }
+        }
+
+        *{ box-sizing: border-box; }
+
+
+
+        :root{
+    --bg: #0b1220; 
+	--surface: #101b32;
+	--card: #0f1a30;
+	--text: #e9eefc; 
+	--muted: #b8c3e6;
+
+	--brand: #00e5ff;
+	--brand-2: #9b5cff;
+
+	--radius: 16px;
+	--gap: 14px;
+	--maxw: 1100px;
+
+	--shadow: 0 12px 24px rgba(0,0,0,.35);
+	--shadow-soft: 0 8px 18px rgba(0,0,0,.25);
+        }
+body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #555;
+}
+
+        
+        .navbar {
+            background-color: black;
+            padding: 1rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            width: 150px;
+            text-align: center;
+        }
+
+        .nav-links li a:hover {
+            background-color: #555;
+        }
+
+        /* --- Submenú --- */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: black;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            min-width: 150px;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        /* --- Icono de hamburguesa y truco de CSS --- */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        #nav-toggle {
+            display: none; /* Oculta el checkbox */
+        }
+        
+        /* Cuando el checkbox está "checked", muestra el menú */
+        #nav-toggle:checked ~ nav .nav-links {
+            display: flex;
+        }
+
+        /* --- Media Query para dispositivos móviles --- */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none; /* Oculta el menú por defecto en móviles */
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background-color: black;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                z-index: 10;
+            }
+
+            .nav-links li {
+                border-bottom: 1px solid #555;
+            }
+
+            .nav-links li a {
+                width: 100%;
+                padding: 1rem;
+            }
+            
+            .dropdown-menu {
+                position: static; /* El submenú se comporta como un elemento más */
+                background-color: #333;
+            }
+            
+            .menu-toggle {
+                display: block; /* Muestra el icono de hamburguesa en móviles */
+            }
+        }
+
+    
+
+
+
+h2{
+    padding: 1 rem;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+}
+
+img{
+    width: 300px;
+}
+
+.main-nav{
+	padding: 0 4vw 14px;
+}
+
+.nav-list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.nav-list a{
+	display: inline-block;
+	padding: 8px 12px;
+	border-radius: 999px;
+	background: rgba(255,255,255,.06);
+	border: 1px solid rgba(255,255,255,.08);
+	box-shadow: 0 6px 14px rgba(0,0,0,.18);
+}
+
+.nav-list a[aria-current="page"]{
+	outline: 2px solid rgba(0,229,255,.45);
+	background: rgba(0,229,255,.10);
+}
+
+
+/* Cards / Buttons */
+.card{
+	
+	background: rgba(16,27,50,.55);
+	border: 1px solid rgba(255,255,255,.08);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	padding: 30px;
+
+}
+
+.btn{
+	display: inline-block;
+	padding: 10px 14px;
+	border-radius: 12px;
+	background: linear-gradient(135deg, rgba(0,229,255,.9), rgba(155,92,255,.9));
+	color: #061022;
+	font-weight: 700;
+	border: 0;
+	box-shadow: var(--shadow-soft);
+}
+
+.btn:hover{ text-decoration: none; filter: brightness(1.05); }
+.btn-ghost{
+	background: rgba(255,255,255,.08);
+	color: var(--text);
+	border: 1px solid rgba(255,255,255,.14);
+}
+
+.btn-small{ padding: 8px 12px; border-radius: 10px; }
+
+/* Media embeds */
+.map-embed, .video-embed{
+	border-radius: var(--radius);
+	overflow: hidden;
+	border: 1px solid rgba(255,255,255,.10);
+	box-shadow: var(--shadow-soft);
+}
+
+.map-embed iframe, .video-embed iframe{
+	width: 100%;
+	height: 260px;
+	border: 0;
+	display: block;
+}
+
+
+/* Form */
+.form{
+	display: grid;
+	gap: 12px;
+}
+
+.field{
+	display: grid;
+	gap: 6px;
+}
+
+input, select, textarea{
+	width: 100%;
+	padding: 10px 12px;
+	border-radius: 12px;
+	border: 1px solid rgba(255,255,255,.12);
+	background: rgba(0,0,0,.20);
+	color: var(--text);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+.checkbox{
+	grid-template-columns: 22px 1fr;
+	align-items: center;
+}
+
+.aside{
+	background: rgba(155,92,255,.12);
+}
+/* footer */
+.site-footer{
+	margin-top: 24px;
+	border-top: 1px solid rgba(255,255,255,.08);
+	background: rgba(16,27,50,.45);
+}
+
+.footer-grid{
+	display: grid;
+	gap: 14px;
+}
+
+.footer-links, .social{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 10px;
+}
+
+.icon{
+	display: inline-grid;
+	place-items: center;
+	width: 22px;
+	height: 22px;
+	border-radius: 7px;
+	background: rgba(255,255,255,.10);
+	border: 1px solid rgba(255,255,255,.12);
+	margin-right: 8px;
+}
+
+.svg-icon{
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	margin-right: 8px;
+	fill: currentColor;
+}
+
+.footer-bottom{
+	margin: 0;
+	padding: 12px 4vw 18px;
+	color: var(--muted);
+	font-size: .9rem;
+	text-align: center;
+}

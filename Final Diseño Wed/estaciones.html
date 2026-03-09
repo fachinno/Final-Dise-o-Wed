@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estaciones</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-brand">
+            <a href="#">geocargaCoL</a>
+            <h2>Carga tu vehículo eléctrico en Colombia</h2>
+        </div>
+        
+        <input type="checkbox" id="nav-toggle">
+        
+        <label for="nav-toggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </label>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="estaciones.html">Estaciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li class="dropdown">
+                <a href="#">shetchs balsamiq</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">shetch home</a></li>
+                        <li><a href="#">shetch secundario</a></li>
+                </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+<main class="container page">
+	<section class="card">
+		<h2>Estaciones destacadas</h2>
+		<p>Listado demostrativo</p>
+	</section>
+
+	<section class="grid-cards" aria-label="Listado de estaciones">
+		<article class="card station">
+			<img src="./png/estaciones-carga2.webp" alt="Estación de carga en ciudad" />
+			<h3>Estación Norte - Bogotá</h3>
+			<p>Conector Tipo 2 · 22kW · Parqueadero cubierto.</p>
+			<a class="btn btn-small" href="contacto.html">Reportar novedad</a>
+		</article>
+
+		<article class="card station">
+			<img src="./png/estaciones-carga.webp" alt="Estación de carga rápida" />
+			<h3>Estación Centro - Medellín</h3>
+			<p>CCS2 · 50kW · Cerca a zona comercial.</p>
+			<a class="btn btn-small" href="contacto.html">Solicitar soporte</a>
+		</article>
+
+		<article class="card station">
+			<img src="./png/card1.jpg" alt="Auto eléctrico conectado a cargador" />
+			<h3>Estación Sur - Cali</h3>
+			<p>Tipo 2 · 7kW · Ideal para carga lenta.</p>
+			<a class="btn btn-small" href="contacto.html">Ver planes</a>
+		</article>
+	</section>
+
+	<aside class="card aside">
+		<h3>Tip rápido</h3>
+		<p>Antes de salir, verifica el tipo de conector y la potencia recomendada para tu vehículo.</p>
+	</aside>
+</main>
+
+
+<footer class="site-footer">
+	<div class="container footer-grid">
+		<div>
+			<h3>geocargaCoL</h3>
+			<p>Estaciones y rutas para movilidad eléctrica.</p>
+		</div>
+		<div>
+			<h3>Redes</h3>
+			<ul class="social">
+				<li><a href="#"><span class="icon" aria-hidden="true">⌁</span> Instagram</a></li>
+				<li><a href="#"><span class="icon" aria-hidden="true">f</span> Facebook</a></li>
+				<li><a href="#"><span class="icon" aria-hidden="true">x</span> X</a></li>
+			</ul>
+		</div>
+	</div>
+	<p class="footer-bottom">© 2026 geocargaCoL.</p>
+</footer>
+</body>
+</html>
